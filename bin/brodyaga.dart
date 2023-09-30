@@ -26,11 +26,11 @@ void main(List<String> arguments) async {
   for (var name in brandList) {
     textResult += ' $name;';
   }
-
+  textResult += '\n';
   resultMassive =
       productsMassive.where((el) => brandList.contains(el.brand)).toList();
   for (var element in resultMassive) {
-    textResult += '${element.title} за \$${element.price}';
+    textResult += '${element.title} за \$${element.price}\n';
   }
   print(textResult);
 }
