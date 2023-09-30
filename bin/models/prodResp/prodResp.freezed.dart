@@ -20,7 +20,7 @@ ProdResp _$ProdRespFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProdResp {
-  List<dynamic> get products => throw _privateConstructorUsedError;
+  List<Product> get products => throw _privateConstructorUsedError;
   int get total => throw _privateConstructorUsedError;
   int get skip => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ abstract class $ProdRespCopyWith<$Res> {
   factory $ProdRespCopyWith(ProdResp value, $Res Function(ProdResp) then) =
       _$ProdRespCopyWithImpl<$Res, ProdResp>;
   @useResult
-  $Res call({List<dynamic> products, int total, int skip, int limit});
+  $Res call({List<Product> products, int total, int skip, int limit});
 }
 
 /// @nodoc
@@ -61,7 +61,7 @@ class _$ProdRespCopyWithImpl<$Res, $Val extends ProdResp>
       products: null == products
           ? _value.products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<Product>,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -86,7 +86,7 @@ abstract class _$$ProdRespImplCopyWith<$Res>
       __$$ProdRespImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<dynamic> products, int total, int skip, int limit});
+  $Res call({List<Product> products, int total, int skip, int limit});
 }
 
 /// @nodoc
@@ -109,7 +109,7 @@ class __$$ProdRespImplCopyWithImpl<$Res>
       products: null == products
           ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<Product>,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -130,7 +130,7 @@ class __$$ProdRespImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ProdRespImpl implements _ProdResp {
   _$ProdRespImpl(
-      {final List<dynamic> products = const [],
+      {final List<Product> products = const [],
       this.total = 0,
       this.skip = 0,
       this.limit = 0})
@@ -139,10 +139,10 @@ class _$ProdRespImpl implements _ProdResp {
   factory _$ProdRespImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProdRespImplFromJson(json);
 
-  final List<dynamic> _products;
+  final List<Product> _products;
   @override
   @JsonKey()
-  List<dynamic> get products {
+  List<Product> get products {
     if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_products);
@@ -195,7 +195,7 @@ class _$ProdRespImpl implements _ProdResp {
 
 abstract class _ProdResp implements ProdResp {
   factory _ProdResp(
-      {final List<dynamic> products,
+      {final List<Product> products,
       final int total,
       final int skip,
       final int limit}) = _$ProdRespImpl;
@@ -204,7 +204,7 @@ abstract class _ProdResp implements ProdResp {
       _$ProdRespImpl.fromJson;
 
   @override
-  List<dynamic> get products;
+  List<Product> get products;
   @override
   int get total;
   @override

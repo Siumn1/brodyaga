@@ -8,7 +8,10 @@ part of 'prodResp.dart';
 
 _$ProdRespImpl _$$ProdRespImplFromJson(Map<String, dynamic> json) =>
     _$ProdRespImpl(
-      products: json['products'] as List<dynamic>? ?? const [],
+      products: (json['products'] as List<dynamic>?)
+              ?.map((e) => Product.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       total: json['total'] as int? ?? 0,
       skip: json['skip'] as int? ?? 0,
       limit: json['limit'] as int? ?? 0,
